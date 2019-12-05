@@ -36,6 +36,7 @@ export default class SortableList extends Component {
     autoscrollAreaSize: PropTypes.number,
     rowActivationTime: PropTypes.number,
     manuallyActivateRows: PropTypes.bool,
+    keyboardShouldPersistTaps: PropTypes.string,
 
     renderRow: PropTypes.func.isRequired,
     renderHeader: PropTypes.func,
@@ -53,6 +54,7 @@ export default class SortableList extends Component {
     manuallyActivateRows: false,
     showsVerticalScrollIndicator: true,
     showsHorizontalScrollIndicator: true,
+    keyboardShouldPersistTaps: 'never',
   };
 
   /**
@@ -210,6 +212,7 @@ export default class SortableList extends Component {
       style,
       showsVerticalScrollIndicator,
       showsHorizontalScrollIndicator,
+      keyboardShouldPersistTaps,
     } = this.props;
     const { animated, contentHeight, contentWidth, scrollEnabled } = this.state;
     const containerStyle = StyleSheet.flatten([
