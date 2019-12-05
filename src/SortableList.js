@@ -241,6 +241,7 @@ export default class SortableList extends Component {
           showsHorizontalScrollIndicator={showsHorizontalScrollIndicator}
           showsVerticalScrollIndicator={showsVerticalScrollIndicator}
           onScroll={this._onScroll}
+          keyboardShouldPersistTaps={keyboardShouldPersistTaps}
         >
           {this._renderHeader()}
           <View style={innerContainerStyle}>{this._renderRows()}</View>
